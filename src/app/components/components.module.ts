@@ -14,6 +14,7 @@ import { ComponentsComponent } from './components.component';
 import { NotificationComponent } from './notification/notification.component';
 import { NgbdModalComponent } from './modal/modal.component';
 import { NgbdModalContent } from './modal/modal.component';
+import { BlogPostThumbnail } from './blog-post-thumbnail/blogpostthumbnail.component';
 
 @NgModule({
     imports: [
@@ -32,9 +33,10 @@ import { NgbdModalContent } from './modal/modal.component';
         NucleoiconsComponent,
         NotificationComponent,
         NgbdModalComponent,
-        NgbdModalContent
+        NgbdModalContent,
+        BlogPostThumbnail
     ],
     entryComponents: [NgbdModalContent],
-    exports:[ ComponentsComponent ]
+    exports:[ ComponentsComponent, BlogPostThumbnail ]
 })
 export class ComponentsModule { }

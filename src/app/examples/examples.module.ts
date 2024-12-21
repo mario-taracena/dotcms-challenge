@@ -7,12 +7,14 @@ import { LandingComponent } from './landing/landing.component';
 import { ProfileComponent } from './profile/profile.component';
 import { SignupComponent } from './signup/signup.component';
 import { BlogListComponent } from './bloglist/bloglist.component';
+import { ComponentsModule } from 'app/components/components.module';
 
 @NgModule({
     imports: [
         CommonModule,
         FormsModule,
         NgbModule,
+        ComponentsModule
     ],
     declarations: [
         LandingComponent,

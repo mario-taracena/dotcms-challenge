@@ -1,0 +1,22 @@
+<div class="card card-profile card-plain">
+    <div class="post-image">
+        <a href="#avatar"><img class="img-rounded img-responsive" attr.src="https://demo.dotcms.com{{post.image.resizeUri}}" alt="..."></a>
+    </div>
+    <div class="card-block">
+        <a href="#paper-kit">
+            <div class="author">
+                <h4 class="card-title">{{post.title}}</h4>
+                <h6 class="card-category">{{post.tags[0]}}</h6>
+            </div>
+        </a>
+        <p class="card-description text-left">
+        {{post.teaser}}
+        </p>
+    </div>
+    <br><br>
+    <div class="card-footer text-right">
+        <div class="calendar"><i class="fa fa-calendar"></i>{{post.postingDate | date: 'MMMM dd, yyyy'}}</div>
+        
+        
+    </div>
+</div>

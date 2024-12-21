@@ -14,6 +14,10 @@ import { AppConstants } from 'app/shared/constants';
 export class BlogListComponent implements OnInit {
   focus: any;
   focus1: any;
+  public blogPostList:Array<any>;
+  public pageTitle:any;
+  public description:any;
+  public title:any;
 
   constructor(private authenticationService:AuthenticationService, 
     private http: HttpClient, 
@@ -36,8 +40,28 @@ export class BlogListComponent implements OnInit {
         next:(data=>{
             const containerKey = Object.keys(data.entity.containers)[0];
             const posts = data.entity.containers[containerKey].contentlets["uuid-1"][1].widgetCodeJSON.posts;
-            console.log(posts);
+            this.pageTitle = data.entity.containers[containerKey].contentlets["uuid-1"][0].title;
+            this.description = data.entity.containers[containerKey].contentlets["uuid-1"][0].body;
+            this.title = data.entity.containers[containerKey].contentlets["uuid-1"][1].title;
+
+            this.buildPostGrid(posts);
+
+
         })
     })
   }
+
+  buildPostGrid(postsList){
+
+    if(postsList !== null && postsList !== undefined){
+        let rows = Array<any>();
+        for (let i = 0; i < postsList.length; i += 3) { 
+            const group = postsList.slice(i, i + 3); 
+            rows.push(group); 
+        }
+        this.blogPostList = rows;
+    }
+
+  }
+
 }
