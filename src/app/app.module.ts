@@ -12,6 +12,10 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { ComponentsModule } from './components/components.module';
 import { ExamplesModule } from './examples/examples.module';
 
+import { HttpClientModule } from '@angular/common/http';
+import { AuthenticationService } from './shared/services/authentication.service';
+import { AppConstants } from './shared/constants';
+
 
 
 
@@ -29,8 +33,9 @@ import { ExamplesModule } from './examples/examples.module';
     ComponentsModule,
     ExamplesModule,
     AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [AuthenticationService,AppConstants],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
