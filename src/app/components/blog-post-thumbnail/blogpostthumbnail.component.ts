@@ -17,8 +17,4 @@ export class BlogPostThumbnail implements OnInit {
     ngOnInit() {
     }
 
-    getPostFormattedDate(){
-
-    }
-
 }

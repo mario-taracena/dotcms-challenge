@@ -15,6 +15,10 @@ import { NotificationComponent } from './notification/notification.component';
 import { NgbdModalComponent } from './modal/modal.component';
 import { NgbdModalContent } from './modal/modal.component';
 import { BlogPostThumbnail } from './blog-post-thumbnail/blogpostthumbnail.component';
+import { ParagraphComponent } from './paragraph/paragraph.component';
+import { BulletListComponent } from './bulletlist/bulletlist.component';
+import { HeadingComponent } from './heading/heading.component';
+import { ImageComponent } from './image/image.component';
 
 @NgModule({
     imports: [
@@ -34,9 +38,20 @@ import { BlogPostThumbnail } from './blog-post-thumbnail/blogpostthumbnail.compo
         NotificationComponent,
         NgbdModalComponent,
         NgbdModalContent,
-        BlogPostThumbnail
+        BlogPostThumbnail,
+        ParagraphComponent,
+        BulletListComponent,
+        HeadingComponent,
+        ImageComponent
     ],
     entryComponents: [NgbdModalContent],
-    exports:[ ComponentsComponent, BlogPostThumbnail ]
+    exports:[ 
+        ComponentsComponent, 
+        BlogPostThumbnail, 
+        ParagraphComponent,
+        BulletListComponent,
+        HeadingComponent,
+        ImageComponent
+    ]
 })
 export class ComponentsModule { }

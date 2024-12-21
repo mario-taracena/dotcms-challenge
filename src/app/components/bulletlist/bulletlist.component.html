@@ -1,0 +1,6 @@
+
+<ul class="cmp-bullet-list text-left">
+    <li *ngFor="let bullet of element.content">
+        <cmp-paragraph *ngFor="let element of bullet.content" [element]="element"></cmp-paragraph>
+    </li>
+</ul>

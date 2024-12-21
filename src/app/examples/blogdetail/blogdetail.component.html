@@ -1,0 +1,53 @@
+
+
+
+<div class="page-header" data-parallax="true" style="background-image: url('{{image}}');">
+    <div class="filter"></div>
+    <div class="container">
+        <div class="motto text-center">
+            <h1>{{pageTitle}}</h1>
+        </div>
+    </div>
+</div>
+<div class="main">
+    <div class="section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 mr-auto ml-auto">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-10 mr-auto ml-auto" >
+                
+                <div class="cmp-content" *ngFor="let element of content">
+                    <div class="cmp-element" *ngIf="element.type == 'paragraph'">
+                        <cmp-paragraph [element]="element"></cmp-paragraph>
+                    </div>
+                    <div class="cmp-element" *ngIf="element.type == 'bulletList'">
+                        <cmp-bullet-list [element]="element"></cmp-bullet-list>
+                    </div>
+                    <div class="cmp-element" *ngIf="element.type == 'heading'">
+                        <cmp-heading [element]="element"></cmp-heading>
+                    </div>
+                    <div class="cmp-element" *ngIf="element.type == 'dotImage'">
+                        <cmp-image [element]="element"></cmp-image>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+        <br/><br/>
+        
+        
+
+    </div>
+</div>
+
+<div class="section section-dark text-center">
+    <div class="container">
+        <h2 class="title">dotCMS Challenge</h2>
+        
+    </div>
+</div>
+

@@ -15,7 +15,6 @@ export class AuthenticationService {
     private pass = "admin";
 
     async getAPIToken(){ 
-        console.log("token?",this.token);
         if(this.token){
             return this.token;
         }else{

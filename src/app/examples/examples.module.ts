@@ -8,6 +8,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { SignupComponent } from './signup/signup.component';
 import { BlogListComponent } from './bloglist/bloglist.component';
 import { ComponentsModule } from 'app/components/components.module';
+import { BlogDetailComponent } from './blogdetail/blogdetail.component';
 
 @NgModule({
     imports: [
@@ -20,7 +21,8 @@ import { ComponentsModule } from 'app/components/components.module';
         LandingComponent,
         SignupComponent,
         ProfileComponent,
-        BlogListComponent
+        BlogListComponent,
+        BlogDetailComponent
     ]
 })
 export class ExamplesModule { }

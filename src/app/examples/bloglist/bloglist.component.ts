@@ -12,8 +12,7 @@ import { AppConstants } from 'app/shared/constants';
 })
 
 export class BlogListComponent implements OnInit {
-  focus: any;
-  focus1: any;
+
   public blogPostList:Array<any>;
   public pageTitle:any;
   public description:any;
