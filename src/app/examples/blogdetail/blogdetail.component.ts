@@ -21,6 +21,7 @@ export class BlogDetailComponent implements OnInit {
     tags:Array<string>;
     content:Array<any>;
     image:any;
+    contentLets:Array<any>;
 
     constructor(private authenticationService:AuthenticationService, 
         private http: HttpClient, 
@@ -48,7 +49,15 @@ export class BlogDetailComponent implements OnInit {
                 this.image = `${this.appConstants.DOMAIN}/dA/${data.entity.urlContentMap.image}/asset/`;
                 this.content = data.entity.urlContentMap.blogContent.content; 
                 console.log('content',this.content);
+                
+
+                const containerKey = Object.keys(data.entity.containers)[0];
+                this.contentLets = data.entity.containers[containerKey].contentlets["uuid-1"];
+                console.log('contentlets',this.contentLets);
             })
         })
     }
+
+
+    
 }

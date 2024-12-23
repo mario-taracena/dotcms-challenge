@@ -18,7 +18,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-10 mr-auto ml-auto" >
+            <div class="col-md-10 mr-auto ml-auto content" >
                 
                 <div class="cmp-content" *ngFor="let element of content">
                     <div class="cmp-element" *ngIf="element.type == 'paragraph'">
@@ -33,12 +33,28 @@
                     <div class="cmp-element" *ngIf="element.type == 'dotImage'">
                         <cmp-image [element]="element"></cmp-image>
                     </div>
+                    <div class="cmp-element" *ngIf="element.type == 'dotContent'">
+                        <cmp-product-promo *ngIf="element.attrs.data.contentType == 'Product'" [element]="element.attrs.data"></cmp-product-promo>
+                    </div>
+
                 </div>
             
             </div>
         </div>
         <br/><br/>
-        
+        <div class="row">
+            <div class="col-md-10 mr-auto ml-auto contentLets" >
+                
+                <div class="cmp-content" *ngFor="let element of contentLets">
+                    <div class="cmp-element" *ngIf="element.contentType == 'BannerCarousel'">
+                        <cmp-banner-carousel [element]="element"></cmp-banner-carousel>
+                    </div>
+                    <div class="cmp-element" *ngIf="element.contentType == 'Product'">
+                        <cmp-product-promo [element]="element"></cmp-product-promo>
+                    </div>
+                </div>
+            </div>
+        </div>
         
 
     </div>

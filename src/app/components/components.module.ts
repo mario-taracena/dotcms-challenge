@@ -19,6 +19,8 @@ import { ParagraphComponent } from './paragraph/paragraph.component';
 import { BulletListComponent } from './bulletlist/bulletlist.component';
 import { HeadingComponent } from './heading/heading.component';
 import { ImageComponent } from './image/image.component';
+import { BannerCarouselComponent } from './bannercarousel/bannercarousel.component';
+import { ProductPromoComponent } from './product/product.component';
 
 @NgModule({
     imports: [
@@ -42,7 +44,9 @@ import { ImageComponent } from './image/image.component';
         ParagraphComponent,
         BulletListComponent,
         HeadingComponent,
-        ImageComponent
+        ImageComponent,
+        BannerCarouselComponent,
+        ProductPromoComponent
     ],
     entryComponents: [NgbdModalContent],
     exports:[ 
@@ -51,7 +55,9 @@ import { ImageComponent } from './image/image.component';
         ParagraphComponent,
         BulletListComponent,
         HeadingComponent,
-        ImageComponent
+        ImageComponent,
+        BannerCarouselComponent,
+        ProductPromoComponent
     ]
 })
 export class ComponentsModule { }

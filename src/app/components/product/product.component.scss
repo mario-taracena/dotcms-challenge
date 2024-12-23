@@ -1,0 +1,22 @@
+
+
+.cmp-product{
+    max-height: 2000px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border: 1px solid lightgrey;
+    padding-top: 10px;
+
+    .carousel-caption{
+        text-shadow: -2px 2px 3px rgba(0, 0, 0, 10);
+        font-weight: bolder;
+    }
+
+    .cmp-image img{
+        max-height: 150px;
+    }
+
+    .price{
+        font-size: 15px;
+    }
+}

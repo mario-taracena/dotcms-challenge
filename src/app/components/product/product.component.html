@@ -1,0 +1,16 @@
+
+<div *ngIf="product !== undefined" class="cmp-product container">
+    <div class="row">
+        <div class="col-lg-6 col-md-12">
+            <h4 class="title">{{product.title}}</h4><br/>
+            <br/>
+            <a [routerLink]="['/']" class="btn btn-danger btn-round">Buy: <span class="price">${{product.retailPrice}}</span></a>
+        </div>
+
+        <div class="col-lg-6 col-md-12">
+            <div class="cmp-image">
+                <img class="img-rounded img-responsive" attr.src="https://demo.dotcms.com{{product.image}}" [alt]="product.title">
+            </div>
+        </div>
+    </div>
+</div>
