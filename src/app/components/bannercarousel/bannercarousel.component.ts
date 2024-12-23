@@ -38,7 +38,7 @@ export class BannerCarouselComponent implements OnInit {
                 console.log("carousel data", data)
                 this.slides = data.contentlets[0].banners;
                 console.log("slides",this.slides)
-                this.title = data.contentlets.title;
+                this.title = data.contentlets[0].title;
             })
         });
     }

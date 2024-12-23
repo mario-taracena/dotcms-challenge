@@ -45,7 +45,7 @@ export class BlogDetailComponent implements OnInit {
                 
                 console.log(data)
 
-                this.pageTitle = data.entity.urlContentMap.pageTitle;
+                this.pageTitle = data.entity.urlContentMap.title;
                 this.image = `${this.appConstants.DOMAIN}/dA/${data.entity.urlContentMap.image}/asset/`;
                 this.content = data.entity.urlContentMap.blogContent.content; 
                 console.log('content',this.content);

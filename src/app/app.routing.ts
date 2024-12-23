@@ -20,7 +20,9 @@ const routes: Routes =[
     { path: 'nucleoicons',      component: NucleoiconsComponent },
     { path: 'bloglist',         component: BlogListComponent},
     { path: 'blog/:id',         component: BlogDetailComponent},
-    { path: 'blog', redirectTo: 'bloglist', pathMatch: 'full' }
+    { path: 'blog', redirectTo: 'bloglist', pathMatch: 'full' },
+    { path: 'Blog/Blog', redirectTo: 'bloglist', pathMatch: 'full' },
+    { path: '**', redirectTo: 'bloglist', pathMatch: 'full' }
 ];
 
 @NgModule({
@@ -35,3 +37,4 @@ const routes: Routes =[
   ],
 })
 export class AppRoutingModule { }
+
